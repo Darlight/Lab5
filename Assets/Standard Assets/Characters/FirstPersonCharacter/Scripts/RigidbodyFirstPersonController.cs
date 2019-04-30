@@ -23,7 +23,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 #if !MOBILE_INPUT
             private bool m_Running;
 #endif
-
             public void UpdateDesiredTargetSpeed(Vector2 input)
             {
 	            if (input == Vector2.zero) return;
@@ -208,7 +207,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
-
+        
         private Vector2 GetInput()
         {
             

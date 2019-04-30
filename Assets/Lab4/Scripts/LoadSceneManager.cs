@@ -17,7 +17,7 @@ public class LoadSceneManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (booelean)
+            if (booelean != false)
             {
                 SceneManager.LoadScene(1);
                 booelean = false;

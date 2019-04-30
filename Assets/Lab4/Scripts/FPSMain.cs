@@ -7,9 +7,13 @@ public class FPSMain : MonoBehaviour
     //Properties of the gun
     private static float range = 75f;
     private static float damage = 10f;
+    private AudioSource gunsound;
     //Uses a camera as an origin coordinates of X,Y and Z  for the Raycaster
     public Camera fpsCam;
-   
+    private void Start()
+    {
+        gunsound = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -17,6 +21,7 @@ public class FPSMain : MonoBehaviour
         //Whever the left-right click of the mouse is pressed, it does the shoot function.
         if (Input.GetButtonDown("Fire1"))
         {
+            gunsound.Play();
             shoot();
         }
     }
